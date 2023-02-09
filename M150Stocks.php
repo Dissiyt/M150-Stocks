@@ -31,5 +31,3 @@ Free Software Foundation, Inc. 51 Franklin Street, Fifth FloorBoston, MA02110-13
 
 defined('ABSPATH') or die('haha ur dead');
 
-// david du hure
-
