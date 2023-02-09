@@ -29,5 +29,8 @@ Free Software Foundation by visiting their Web site or by writing to
 Free Software Foundation, Inc. 51 Franklin Street, Fifth FloorBoston, MA02110-1301USA
 */
 
-defined('ABSPATH') or die('haha ur dead');
+defined('ABSPATH') or die('ded');
 
+
+
+echo do_shortcode("[your_shortcode]");
