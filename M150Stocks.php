@@ -34,3 +34,5 @@ defined('ABSPATH') or die('ded');
 
 
 echo do_shortcode("[your_shortcode]");
+
+// hi
