@@ -29,10 +29,43 @@ Free Software Foundation by visiting their Web site or by writing to
 Free Software Foundation, Inc. 51 Franklin Street, Fifth FloorBoston, MA02110-1301USA
 */
 
-defined('ABSPATH') or die('ded');
+defined('ABSPATH') or die('haha ur dead');
 
+class M150Stocks
+{
+	private Shortcodes $shortcodes;
 
+	public function __construct(){
+		include_once 'shortcodes.php';
+		$this->shortcodes = new Shortcodes();
+	}
 
-echo do_shortcode("[your_shortcode]");
+	function activate() {
+		//generate CPT
+		//flush rewrite rules
+	}
 
-// hi
+	function register() {
+		add_shortcode('testShortcode', array($this->shortcodes, 'testShortcode'));
+	}
+
+	function deactivate() {
+		//flush rewrite rules
+	}
+
+	function uninstall() {
+		//delete CPT
+		//delete all the plugin data from the DB
+	}
+}
+
+if (class_exists('M150Stocks')){
+	$M150Stocks = new M150Stocks();
+	$M150Stocks->register();
+}
+
+//activation
+register_activation_hook(__FILE__, array($M150Stocks, 'activate'));
+
+//deactivation
+register_deactivation_hook(__FILE__, array($M150Stocks, 'deactivate'));
