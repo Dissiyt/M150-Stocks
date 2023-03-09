@@ -47,6 +47,7 @@ class M150Stocks
 
 	function register() {
 		add_shortcode('testShortcode', array($this->shortcodes, 'testShortcode'));
+		add_shortcode('newsView', array($this->shortcodes, 'wpb_news_shortcode'));
 	}
 
 	function deactivate() {
